@@ -3,7 +3,7 @@
 Launcher pubblico per il setup Windows di MarketEcho, ospitato gratuitamente su GitHub Pages.
 Il codice applicativo rimane nel repository privato MarketEcho-AI/MarketEcho-AI.
 
-Aprire PowerShell su Windows x64 e incollare:
+Aprire PowerShell normalmente su Windows x64, **senza Esegui come amministratore**, e incollare:
 
 ```powershell
 irm https://marketecho-ai.github.io/marketecho-setup/install.ps1 | iex
@@ -14,6 +14,9 @@ Il launcher prepara Git for Windows se manca (verifica SHA256 e firma Authentico
 scarica main e avvia il setup ufficiale. Il setup mostra il commit, chiede una nuova
 cartella e il numero del conto Demo, quindi usa la distribuzione verificata di quel commit.
 La password del conto si inserisce soltanto in MT5.
+Una console elevata viene bloccata prima di download, pulizia o creazione di cartelle
+con `SETUP_STANDARD_USER_REQUIRED`: riaprire PowerShell normalmente e ripetere la stessa riga.
+Solo gli helper di orologio e percorsi lunghi richiedono la UAC quando necessario.
 
 Non sostituisce vecchie installazioni e non importa database esistenti.
 Avvio protetto: Trading OFF, Kill ON, Algo OFF, Demo PAUSED.
